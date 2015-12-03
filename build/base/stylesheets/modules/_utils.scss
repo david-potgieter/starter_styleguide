@@ -1,0 +1,38 @@
+
+//@include opacity(0.8);
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//@extend %clearfix;
+%clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//@include size(100px, 300px);
+@mixin size($width, $height: $width) {
+      width: $width;
+      height: $height;
+}
+
+//@include prefix((transform: translate(-50%, -50%)), webkit ms);
+@mixin prefix($map, $vendors: webkit moz ms o) {
+  @each $prop, $value in $map {
+        @if $vendors {
+          @each $vendor in $vendors {
+            #{"-" + $vendor + "-" + $prop}: #{$value};
+          }
+        }
+        // Dump regular property anyway
+        #{$prop}: #{$value};
+  }
+}

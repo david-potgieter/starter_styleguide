@@ -1,0 +1,8 @@
+html,
+body{
+    @include size(100%);
+    padding: 0;
+    margin: 0;
+    $em-base: 14px;
+    $rem-base: 14px;
+}

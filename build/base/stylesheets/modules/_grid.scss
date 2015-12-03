@@ -1,0 +1,7 @@
+.col--full{
+    @include span(100%);
+}
+
+.col--half{
+    @include span(50%);
+}

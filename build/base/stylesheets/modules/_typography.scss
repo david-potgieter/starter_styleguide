@@ -1,0 +1,61 @@
+// @import 'gotham';
+$sg__font-family: 'PT Sans Narrow', sans-serif;
+
+$text__color: #ffffff;
+
+@mixin text(
+    $size,
+    $line,
+    $margin: 0,
+    $family: $text__family--gotham,
+    $color: $text__color--base,
+    $weight: 200,
+    $decoration: none,
+    $transform: none){
+        font-size       : rem(size);
+        font-family     : $family;
+        font-weight     : $weight;
+        text-transform  : $transform;
+        line-height     : $line;
+        color           : $color;
+        text-decoration : $decoration;
+}
+
+.header{
+
+}
+
+.header--h1{
+    font-size: rem(28);
+}
+.header--h2{
+    font-size: rem(24);
+}
+.header--h3{
+    font-size: rem(20);
+}
+.header--h4{
+    font-size: rem(18);
+}
+.header--h5{
+    font-size: rem(16);
+}
+.header--h6{
+    font-size: rem(14);
+}
+
+.font{
+    color:white;
+}
+
+.more{
+    position: absolute;
+}
+
+.paragraph{
+
+}
+
+.paragraph--default{
+
+}
